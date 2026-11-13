@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>原始码农：光年 Debug｜交付总览</title>
+<style>
+:root{--ink:#12162a;--paper:#f4f1ea;--cyan:#0e8f86;--mag:#d02a67;--line:#dcd7cc;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+font-family:"Microsoft YaHei","PingFang SC",system-ui,sans-serif;line-height:1.7}
+.wrap{max-width:1180px;margin:0 auto;padding:38px 26px 80px}
+header{border-bottom:3px solid var(--ink);padding-bottom:20px;margin-bottom:28px}
+h1{font-size:34px;margin:0 0 6px;letter-spacing:1px}
+.sub{color:#5d6270;font-size:15px}
+.hero{display:flex;gap:26px;flex-wrap:wrap;margin-bottom:34px;align-items:flex-start}
+.cover{width:236px;border:3px solid var(--ink);box-shadow:8px 8px 0 #12162a22;flex:0 0 auto}
+.spec{flex:1;min-width:280px}
+.kv{display:grid;grid-template-columns:110px 1fr;gap:7px 14px;font-size:14px}
+.kv b{color:var(--cyan)}
+.badge{display:inline-block;background:var(--mag);color:#fff;padding:3px 10px;
+font-size:12px;border-radius:2px;margin-right:6px}
+h2{font-size:21px;margin:38px 0 12px;padding-left:12px;border-left:6px solid var(--mag)}
+h3{font-size:16px;margin:22px 0 8px;color:var(--cyan)}
+table{width:100%;border-collapse:collapse;font-size:12.5px;background:#fff;
+box-shadow:0 1px 3px #00000010}
+th{background:var(--ink);color:#fff;text-align:left;padding:8px 9px;font-weight:600;
+white-space:nowrap}
+td{padding:7px 9px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:nth-child(even) td{background:#faf8f4}
+.note{background:#fff;border-left:4px solid var(--cyan);padding:12px 16px;font-size:13px;margin:14px 0}
+ul{font-size:14px} li{margin:5px 0}
+code{background:#ece8df;padding:1px 5px;font-size:12px}
+footer{margin-top:46px;border-top:1px solid var(--line);padding-top:16px;
+color:#777;font-size:12px}
+</style></head><body><div class="wrap">
+<header><h1>原始码农：光年 Debug</h1>
+<div class="sub">The Primitive Coder: A Light-Year Debug · 漫剧短片交付总览</div></header>
+<div class="hero">
+<img class="cover" src="cover.jpg" alt="封面">
+<div class="spec">
+<div style="margin-bottom:12px"><span class="badge">成片</span>
+<span class="badge" style="background:var(--cyan)">分镜表</span>
+<span class="badge" style="background:#3b6bff">字幕时间轴</span>
+<span class="badge" style="background:#d8892a">音频清单</span></div>
+<div class="kv">
+<b>成片文件</b><span><code>lightyear-debug.mp4</code></span>
+<b>画幅</b><span>9:16 竖屏 · 1080x1920</span>
+<b>时长</b><span>01:48.00（1 分 48 秒）</span>
+<b>帧率</b><span>24 fps / H.264 + AAC</span>
+<b>结构</b><span>19 镜 · 5 场景 · 起承转合四段</span>
+<b>画风</b><span>日式赛博朋克漫画：粗墨线 / 网点 / 平涂，深靛蓝 + 霓虹青品红，转段翻为白与暖金</span>
+<b>配音</b><span>普通话 12 句（4 条声线），硬字幕与配音实测时长同步</span>
+<b>音频</b><span>15 类程序化音效 / 28 个事件 / 4 段 BGM / 108 秒立体声混音</span>
+</div>
+<div class="note">本片题材、角色、台词等未由用户指定，均采用<strong>简洁通用默认设定</strong>；
+所有可替换项及替换方法见 <code>docs/01_默认设定与可替换项.md</code>。</div>
+</div></div>
+<video controls preload="metadata" poster="cover.jpg"
+ style="width:100%;max-width:400px;border:3px solid var(--ink);display:block;margin:0 0 30px;background:#000">
+<source src="lightyear-debug.mp4" type="video/mp4">
+您的浏览器不支持内嵌播放，请直接打开同目录下的 MP4 成片。</video>
+
+<h2>一、剧情与场景</h2>
+<ul>
+<li><b>起</b>：霓虹雨夜，阿橘抱着纸质简历站在招聘塔下，HR-Ω 判定「技能栈：原始，不予受理」。</li>
+<li><b>承</b>：地下筛选大厅的人海与「不兼容」；阿橘回到旧楼天台，用肉垫一个键一个键敲完那行代码。</li>
+<li><b>转</b>：代码接通城市底层协议，全城霓虹熄灭；视野拉升——街道是电路，城市是芯片，星空是运行日志。</li>
+<li><b>合</b>：光年尺度上宇宙循环少了一个分号；阿橘补上，宇宙重新亮起，然后关掉录用通知继续写代码。</li>
+</ul>
+<table><tr><th>编号</th><th>场景</th><th>段落</th><th>时间</th><th>色调</th><th>戏剧功能</th></tr><tr><td>S1</td><td>霓虹雨巷 · 招聘塔门前</td><td>起</td><td>00:00–00:24</td><td>深靛蓝 / 品红霓虹 / 冷雨</td><td>被判定「原始」，建立主角的笨拙与不被接纳</td></tr><tr><td>S2</td><td>地下资格筛选大厅</td><td>承</td><td>00:24–00:41</td><td>冷蓝荧光 / 人海编号光牌</td><td>制度化的拒绝，把主角推到边缘</td></tr><tr><td>S3</td><td>旧楼天台 · CRT 终端</td><td>承 → 转</td><td>00:41–00:57</td><td>青绿屏幕光 / 雨渐停</td><td>一个键一个键敲完那行代码，触发底层协议</td></tr><tr><td>S4</td><td>全城熄灭 · 光年拉升</td><td>转</td><td>00:57–01:21</td><td>近黑 → 白 / 暖金，强烈反差</td><td>尺度反转：城市→电路→芯片→运行日志</td></tr><tr><td>S5</td><td>宇宙源码层 · 收束</td><td>合</td><td>01:21–01:48</td><td>纯白与暖金高调</td><td>补上分号，宇宙重启；关掉录用通知继续写代码</td></tr></table>
+
+<h2>二、分镜表（19 镜）</h2>
+<div class="note">版式：single = 整页大格，v2 = 上下两格，v3 = 上中下三格。每格按时间依次显现；
+单镜推拉幅度不超过 12%，避免破坏分格版面。</div>
+<table><tr><th>镜号</th><th>时间码</th><th>时长</th><th>段落</th><th>场景</th><th>版面 / 原画</th><th>镜头运动</th><th>转场</th><th>对白字幕</th></tr><tr><td>01</td><td>00:00.00–00:05.00</td><td>5.0s</td><td>起</td><td>S1</td><td>single · p01</td><td>push</td><td>fade_black</td><td>这座城，只认最新版本的语言。</td></tr><tr><td>02</td><td>00:05.00–00:10.00</td><td>5.0s</td><td>起</td><td>S1</td><td>v2 · p02 + p03</td><td>push_pull</td><td>panel_wipe</td><td>—</td></tr><tr><td>03</td><td>00:10.00–00:15.50</td><td>5.5s</td><td>起</td><td>S1</td><td>single · p04</td><td>push_pan_right</td><td>flash_white</td><td>「技能栈：原始。不予受理。」</td></tr><tr><td>04</td><td>00:15.50–00:21.00</td><td>5.5s</td><td>起</td><td>S1</td><td>v3 · p05 + p03 + p02</td><td>push</td><td>screentone_flash</td><td>……我只会这一行。</td></tr><tr><td>05</td><td>00:21.00–00:24.00</td><td>3.0s</td><td>起→承</td><td>S1/S2</td><td>single · p06</td><td>push_dark</td><td>cut_black</td><td>—</td></tr><tr><td>06</td><td>00:24.00–00:30.00</td><td>6.0s</td><td>承</td><td>S2</td><td>single · p06</td><td>pan_right</td><td>panel_wipe</td><td>队伍没有尽头，编号一直排到看不见的地方。</td></tr><tr><td>07</td><td>00:30.00–00:35.50</td><td>5.5s</td><td>承</td><td>S2</td><td>v2 · p07 + p05</td><td>push</td><td>flash_red</td><td>不兼容。</td></tr><tr><td>08</td><td>00:35.50–00:41.00</td><td>5.5s</td><td>承</td><td>S2</td><td>single · p01</td><td>pull</td><td>fade_black</td><td>—</td></tr><tr><td>09</td><td>00:41.00–00:46.50</td><td>5.5s</td><td>承→转</td><td>S3</td><td>v2 · p08 + p09</td><td>push_pull</td><td>screentone_flash</td><td>它用爪子，一个键，一个键，把那行代码敲完。</td></tr><tr><td>10</td><td>00:46.50–00:52.00</td><td>5.5s</td><td>承→转</td><td>S3</td><td>single · p09</td><td>push_slow</td><td>none</td><td>—</td></tr><tr><td>11</td><td>00:52.00–00:57.50</td><td>5.5s</td><td>转</td><td>S3</td><td>single · p09</td><td>hold_shake</td><td>flash_white</td><td>底层协议，已接入。</td></tr><tr><td>12</td><td>00:57.50–01:03.50</td><td>6.0s</td><td>转</td><td>S4</td><td>single · p10</td><td>pull_fast</td><td>flash_white</td><td>灯灭的那一秒，视野被拉到了光年之外。</td></tr><tr><td>13</td><td>01:03.50–01:09.50</td><td>6.0s</td><td>转</td><td>S4</td><td>single · p11</td><td>pull_fast</td><td>dissolve</td><td>—</td></tr><tr><td>14</td><td>01:09.50–01:15.50</td><td>6.0s</td><td>转</td><td>S4</td><td>single · p12</td><td>pull_slow</td><td>dissolve</td><td>原来招聘塔，只是一个函数。</td></tr><tr><td>15</td><td>01:15.50–01:21.50</td><td>6.0s</td><td>转</td><td>S4</td><td>single · p13</td><td>pan_right</td><td>screentone_flash</td><td>—</td></tr><tr><td>16</td><td>01:21.50–01:27.50</td><td>6.0s</td><td>合</td><td>S5</td><td>single · p14</td><td>push</td><td>fade_white</td><td>……原来，这里少了一个分号。</td></tr><tr><td>17</td><td>01:27.50–01:35.00</td><td>7.5s</td><td>合</td><td>S5</td><td>v2 · p14 + p15</td><td>push_pull</td><td>flash_white</td><td>—</td></tr><tr><td>18</td><td>01:35.00–01:41.00</td><td>6.0s</td><td>合</td><td>S5</td><td>v2 · p04 + p16</td><td>push_pull</td><td>panel_wipe</td><td>录用通知：已通过。</td></tr><tr><td>19</td><td>01:41.00–01:48.00</td><td>7.0s</td><td>合</td><td>S5</td><td>single · p16</td><td>pull_slow</td><td>fade_black</td><td>它关掉通知，继续写它的代码。</td></tr></table>
+
+<h2>三、字幕时间轴（12 条）</h2>
+<div class="note">硬字幕已烧录；<code>docs/subtitles.srt</code> 为标准外挂字幕。入点/出点取配音实测时长。</div>
+<table><tr><th>#</th><th>镜号</th><th>入点</th><th>出点</th><th>时长</th><th>说话人</th><th>字幕文本</th></tr><tr><td>1</td><td>01</td><td>00:00.38</td><td>00:04.27</td><td>3.89s</td><td>旁白</td><td>这座城，只认最新版本的语言。</td></tr><tr><td>2</td><td>03</td><td>00:10.38</td><td>00:13.84</td><td>3.46s</td><td>HR-Ω</td><td>「技能栈：原始。不予受理。」</td></tr><tr><td>3</td><td>04</td><td>00:15.88</td><td>00:17.99</td><td>2.11s</td><td>阿橘</td><td>……我只会这一行。</td></tr><tr><td>4</td><td>06</td><td>00:24.38</td><td>00:29.13</td><td>4.75s</td><td>旁白</td><td>队伍没有尽头，编号一直排到看不见的地方。</td></tr><tr><td>5</td><td>07</td><td>00:30.38</td><td>00:32.04</td><td>1.66s</td><td>系统音</td><td>不兼容。</td></tr><tr><td>6</td><td>09</td><td>00:41.38</td><td>00:46.25</td><td>4.87s</td><td>旁白</td><td>它用爪子，一个键，一个键，把那行代码敲完。</td></tr><tr><td>7</td><td>11</td><td>00:52.38</td><td>00:55.28</td><td>2.90s</td><td>系统音</td><td>底层协议，已接入。</td></tr><tr><td>8</td><td>12</td><td>00:57.88</td><td>01:02.03</td><td>4.15s</td><td>旁白</td><td>灯灭的那一秒，视野被拉到了光年之外。</td></tr><tr><td>9</td><td>14</td><td>01:09.88</td><td>01:13.48</td><td>3.60s</td><td>旁白</td><td>原来招聘塔，只是一个函数。</td></tr><tr><td>10</td><td>16</td><td>01:21.88</td><td>01:25.02</td><td>3.14s</td><td>阿橘</td><td>……原来，这里少了一个分号。</td></tr><tr><td>11</td><td>18</td><td>01:35.38</td><td>01:37.68</td><td>2.30s</td><td>HR-Ω</td><td>录用通知：已通过。</td></tr><tr><td>12</td><td>19</td><td>01:41.38</td><td>01:44.84</td><td>3.46s</td><td>旁白</td><td>它关掉通知，继续写它的代码。</td></tr></table>
+
+<h2>四、音频清单</h2>
+<h3>4.1 配音（12 条）</h3>
+<table><tr><th>#</th><th>镜号</th><th>角色</th><th>声线</th><th>语速</th><th>入点</th><th>出点</th><th>时长</th><th>文本</th></tr><tr><td>1</td><td>01</td><td>旁白</td><td>zh-CN-YunxiNeural</td><td>-6%</td><td>00:00.38</td><td>00:04.27</td><td>3.89s</td><td>这座城，只认最新版本的语言。</td></tr><tr><td>2</td><td>03</td><td>HR-Ω</td><td>zh-CN-YunyangNeural</td><td>-8%</td><td>00:10.38</td><td>00:13.84</td><td>3.46s</td><td>技能栈：原始。不予受理。</td></tr><tr><td>3</td><td>04</td><td>阿橘</td><td>zh-CN-XiaoxiaoNeural</td><td>-12%</td><td>00:15.88</td><td>00:17.99</td><td>2.11s</td><td>我只会这一行。</td></tr><tr><td>4</td><td>06</td><td>旁白</td><td>zh-CN-YunxiNeural</td><td>-6%</td><td>00:24.38</td><td>00:29.13</td><td>4.75s</td><td>队伍没有尽头，编号一直排到看不见的地方。</td></tr><tr><td>5</td><td>07</td><td>系统音</td><td>zh-CN-XiaoyiNeural</td><td>-4%</td><td>00:30.38</td><td>00:32.04</td><td>1.66s</td><td>不兼容。</td></tr><tr><td>6</td><td>09</td><td>旁白</td><td>zh-CN-YunxiNeural</td><td>+2%</td><td>00:41.38</td><td>00:46.25</td><td>4.87s</td><td>它用爪子，一个键，一个键，把那行代码敲完。</td></tr><tr><td>7</td><td>11</td><td>系统音</td><td>zh-CN-XiaoyiNeural</td><td>-4%</td><td>00:52.38</td><td>00:55.28</td><td>2.90s</td><td>底层协议，已接入。</td></tr><tr><td>8</td><td>12</td><td>旁白</td><td>zh-CN-YunxiNeural</td><td>-6%</td><td>00:57.88</td><td>01:02.03</td><td>4.15s</td><td>灯灭的那一秒，视野被拉到了光年之外。</td></tr><tr><td>9</td><td>14</td><td>旁白</td><td>zh-CN-YunxiNeural</td><td>-6%</td><td>01:09.88</td><td>01:13.48</td><td>3.60s</td><td>原来招聘塔，只是一个函数。</td></tr><tr><td>10</td><td>16</td><td>阿橘</td><td>zh-CN-XiaoxiaoNeural</td><td>-12%</td><td>01:21.88</td><td>01:25.02</td><td>3.14s</td><td>原来，这里少了一个分号。</td></tr><tr><td>11</td><td>18</td><td>HR-Ω</td><td>zh-CN-YunyangNeural</td><td>-8%</td><td>01:35.38</td><td>01:37.68</td><td>2.30s</td><td>录用通知：已通过。</td></tr><tr><td>12</td><td>19</td><td>旁白</td><td>zh-CN-YunxiNeural</td><td>-6%</td><td>01:41.38</td><td>01:44.84</td><td>3.46s</td><td>它关掉通知，继续写它的代码。</td></tr></table>
+<h3>4.2 音效事件（28 个，15 类程序化合成）</h3>
+<table><tr><th>名称</th><th>中文</th><th>类型</th><th>镜号</th><th>入点</th><th>出点</th><th>时长</th></tr><tr><td>hum</td><td>霓虹电流嗡鸣</td><td>环境铺底</td><td>—</td><td>00:00.00</td><td>00:05.00</td><td>5.00s</td></tr><tr><td>rain</td><td>雨声</td><td>环境铺底</td><td>—</td><td>00:00.00</td><td>00:10.00</td><td>10.00s</td></tr><tr><td>paper</td><td>纸张摩擦</td><td>点状</td><td>02</td><td>00:05.80</td><td>00:06.22</td><td>0.42s</td></tr><tr><td>hum</td><td>霓虹电流嗡鸣</td><td>环境铺底</td><td>—</td><td>00:10.00</td><td>00:15.50</td><td>5.50s</td></tr><tr><td>scan</td><td>全息扫描</td><td>点状</td><td>03</td><td>00:10.50</td><td>00:11.50</td><td>1.00s</td></tr><tr><td>rain</td><td>雨声</td><td>环境铺底</td><td>—</td><td>00:15.50</td><td>00:21.00</td><td>5.50s</td></tr><tr><td>reject</td><td>拒绝提示</td><td>点状</td><td>04</td><td>00:15.90</td><td>00:16.48</td><td>0.58s</td></tr><tr><td>crowd</td><td>人群低噪</td><td>环境铺底</td><td>—</td><td>00:21.00</td><td>00:30.00</td><td>9.00s</td></tr><tr><td>mech</td><td>机械吐纸</td><td>点状</td><td>05</td><td>00:21.60</td><td>00:22.45</td><td>0.85s</td></tr><tr><td>hum</td><td>霓虹电流嗡鸣</td><td>环境铺底</td><td>—</td><td>00:24.00</td><td>00:30.00</td><td>6.00s</td></tr><tr><td>reject</td><td>拒绝提示</td><td>点状</td><td>07</td><td>00:30.40</td><td>00:30.98</td><td>0.58s</td></tr><tr><td>mech</td><td>机械吐纸</td><td>点状</td><td>07</td><td>00:30.60</td><td>00:31.45</td><td>0.85s</td></tr><tr><td>paper</td><td>纸张摩擦</td><td>点状</td><td>07</td><td>00:30.80</td><td>00:31.22</td><td>0.42s</td></tr><tr><td>crowd</td><td>人群低噪</td><td>环境铺底</td><td>—</td><td>00:35.50</td><td>00:41.00</td><td>5.50s</td></tr><tr><td>rain</td><td>雨声</td><td>环境铺底</td><td>—</td><td>00:35.50</td><td>00:41.00</td><td>5.50s</td></tr><tr><td>hum</td><td>霓虹电流嗡鸣</td><td>环境铺底</td><td>—</td><td>00:41.00</td><td>00:52.00</td><td>11.00s</td></tr><tr><td>keyboard</td><td>机械键盘敲击</td><td>点状</td><td>09</td><td>00:41.45</td><td>00:44.05</td><td>2.60s</td></tr><tr><td>keyboard</td><td>机械键盘敲击</td><td>点状</td><td>10</td><td>00:46.95</td><td>00:49.55</td><td>2.60s</td></tr><tr><td>boot</td><td>底层协议接入</td><td>点状</td><td>11</td><td>00:52.90</td><td>00:55.50</td><td>2.60s</td></tr><tr><td>riser</td><td>尺度拉升</td><td>环境铺底</td><td>—</td><td>00:57.50</td><td>01:09.50</td><td>12.00s</td></tr><tr><td>blackout</td><td>全城熄灭</td><td>点状</td><td>12</td><td>00:57.65</td><td>00:59.15</td><td>1.50s</td></tr><tr><td>data</td><td>数据流噪</td><td>环境铺底</td><td>—</td><td>01:03.50</td><td>01:21.50</td><td>18.00s</td></tr><tr><td>hum</td><td>霓虹电流嗡鸣</td><td>环境铺底</td><td>—</td><td>01:15.50</td><td>01:21.50</td><td>6.00s</td></tr><tr><td>chime</td><td>分号落下</td><td>点状</td><td>16</td><td>01:22.70</td><td>01:25.70</td><td>3.00s</td></tr><tr><td>chime</td><td>分号落下</td><td>点状</td><td>17</td><td>01:28.70</td><td>01:31.70</td><td>3.00s</td></tr><tr><td>bloom</td><td>宇宙重启</td><td>点状</td><td>17</td><td>01:29.50</td><td>01:34.50</td><td>5.00s</td></tr><tr><td>notify</td><td>录用通知</td><td>点状</td><td>18</td><td>01:35.80</td><td>01:36.60</td><td>0.80s</td></tr><tr><td>keyboard</td><td>机械键盘敲击</td><td>点状</td><td>19</td><td>01:41.45</td><td>01:44.05</td><td>2.60s</td></tr></table>
+<h3>4.3 BGM（4 段）</h3>
+<table><tr><th>段</th><th>名称</th><th>时间</th><th>处理</th></tr><tr><td>A</td><td>起 · 冷雨</td><td>00:00.00–00:24.00</td><td>低沉小调 synth pad，无节拍，雨与电流为主</td></tr><tr><td>B</td><td>承 · 机械</td><td>00:24.00–00:57.00</td><td>加入 84 BPM 极简脉冲低音与金属 click，压抑推进</td></tr><tr><td>C</td><td>转 · 失重</td><td>00:57.00–01:21.00</td><td>撤掉节拍，长音 pad + 上行泛音，制造失重与空旷</td></tr><tr><td>D</td><td>合 · 暖金</td><td>01:21.00–01:48.00</td><td>大调温暖和弦，缓慢渐强后收束为单音</td></tr></table>
+
+<h2>五、一致性控制与可替换项</h2>
+<ul>
+<li><b>角色一致</b>：16 张原画共用同一段画风前缀与角色描述；左耳缺口、褪色红围巾、CRT 背包、代码瞳四项特征全程不变。</li>
+<li><b>线条一致</b>：格线宽度、白边宽度、网点密度、字幕样式由渲染器常量统一控制。</li>
+<li><b>文字可控</b>：屏内代码、错误提示、OFFER 弹窗均由渲染器后期绘制，不交给绘画模型，避免乱码。</li>
+<li><b>色彩反转</b>：S4 由深靛蓝翻为纯白/暖金，是全片唯一一次基调反转，标记尺度反转。</li>
+<li><b>可替换</b>：片名 / 主角 / 对手 / 道具 / 画风 / 色值 / 时长 / 声线 / 台词均可一处修改后重新生成全片。</li>
+</ul>
+<footer>生成时间 2026-11-12 · 画面素材 16 张统一风格原画 · 本地逐帧渲染 1080×1920 / 24 fps ·
+中文 TTS 配音 + 程序化音效 BGM · 交付目录 output/manju-cyberpunk-20261112/</footer>
+</div></body></html>
